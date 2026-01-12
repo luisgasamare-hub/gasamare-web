@@ -24,10 +24,12 @@ export function Navbar() {
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
+  // Cierra el menú al navegar
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
+  // Bloquea scroll cuando el menú está abierto
   useEffect(() => {
     if (!open) return;
     const prev = document.body.style.overflow;
@@ -44,14 +46,15 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-[120rem] px-2 sm:px-4 lg:px-6">
         <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center min-w-0">
+          {/* ✅ LOGO como el antiguo (sin límites raros en móvil) */}
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/logo-gasamare.svg"
               alt="Gasamare Gestión"
               width={900}
               height={220}
               priority
-              className="h-12 w-auto max-w-[240px] sm:max-w-none"
+              className="h-12 w-auto"
               quality={100}
             />
           </Link>
@@ -96,23 +99,24 @@ export function Navbar() {
             </Link>
           </div>
 
+          {/* ✅ Hamburguesa solo móvil, SIN recuadro */}
           <button
             type="button"
-            className="md:hidden inline-flex items-center justify-center w-10 h-10 border"
-            style={{ borderColor: BORDER }}
+            className="md:hidden inline-flex items-center justify-center w-10 h-10"
             aria-label="Abrir menú"
             aria-expanded={open}
             onClick={() => setOpen(true)}
           >
-            <span className="block w-5">
-              <span className="block h-[2px] mb-1" style={{ background: PRIMARY }} />
-              <span className="block h-[2px] mb-1" style={{ background: PRIMARY }} />
+            <span className="block w-6">
+              <span className="block h-[2px] mb-1.5" style={{ background: PRIMARY }} />
+              <span className="block h-[2px] mb-1.5" style={{ background: PRIMARY }} />
               <span className="block h-[2px]" style={{ background: PRIMARY }} />
             </span>
           </button>
         </div>
       </div>
 
+      {/* Menú móvil */}
       {open && (
         <div className="md:hidden fixed inset-0 z-[60]">
           <div
@@ -124,13 +128,18 @@ export function Navbar() {
             className="absolute right-0 top-0 h-full w-[82%] max-w-[360px] bg-white shadow-xl"
             style={{ borderLeft: `1px solid ${BORDER}` }}
           >
-            <div className="h-20 px-4 flex items-center justify-end border-b" style={{ borderColor: BORDER }}>
+            <div
+              className="h-20 px-4 flex items-center justify-end border-b"
+              style={{ borderColor: BORDER }}
+            >
               <button
                 className="w-10 h-10 inline-flex items-center justify-center"
                 aria-label="Cerrar menú"
                 onClick={() => setOpen(false)}
               >
-                <span className="text-2xl leading-none" style={{ color: PRIMARY }}>×</span>
+                <span className="text-2xl leading-none" style={{ color: PRIMARY }}>
+                  ×
+                </span>
               </button>
             </div>
 
@@ -157,7 +166,12 @@ export function Navbar() {
               <Link
                 href="/area-clientes"
                 className="block py-4 border-b"
-                style={{ borderColor: BORDER, color: TEXT_DEFAULT, fontWeight: 500, fontSize: "18px" }}
+                style={{
+                  borderColor: BORDER,
+                  color: TEXT_DEFAULT,
+                  fontWeight: 500,
+                  fontSize: "18px",
+                }}
               >
                 Área clientes
               </Link>
@@ -176,4 +190,3 @@ export function Navbar() {
     </header>
   );
 }
-
