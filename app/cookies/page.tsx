@@ -1,11 +1,13 @@
-// app/cookies/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Política de cookies | Gasamare Gestión",
-  description: "Política de cookies del sitio web de Gasamare Gestión.",
+  description: 
+   "Política de cookies del sitio web de Gasamare Gestión.",
+  alternates: { canonical: "/cookies" }
+
 };
 
 const PRIMARY = "#1B123A";
@@ -23,7 +25,7 @@ export default function CookiesPage() {
             alt="Gasamare Gestión"
             fill
             className="object-contain"
-            priority
+            priority={false}
           />
         </div>
 
@@ -36,6 +38,8 @@ export default function CookiesPage() {
           </p>
         </div>
       </header>
+
+      <h2 className="sr-only">Política de cookies de Gasamare Gestión</h2>
 
       <div className="mt-6 border-t border-black/10" />
 
@@ -301,4 +305,3 @@ export default function CookiesPage() {
     </main>
   );
 }
-

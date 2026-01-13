@@ -5,11 +5,43 @@ import { ContactInfo } from "../components/contact/contact-info";
 export const metadata: Metadata = {
   title: "Contacto | Gasamare Gestión",
   description: "Contacta con GASAMARE. Te atendemos por email, teléfono o WhatsApp.",
+  alternates: { canonical: "/contacto" },
 };
 
 export default function ContactoPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Gasamare Gestión, S.L.",
+    url: "https://gasamare.es/contacto",
+    areaServed: ["Arroyomolinos", "Madrid", "España", "Online"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Arroyomolinos",
+      addressRegion: "Madrid",
+      addressCountry: "ES",
+    },
+    telephone: "+34 614 85 93 57",
+    email: "luis.gasamare@gmail.com",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "Atención al cliente",
+        telephone: "+34 614 85 93 57",
+        email: "luis.gasamare@gmail.com",
+        areaServed: "ES",
+        availableLanguage: ["es"],
+      },
+    ],
+  };
+
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <section className="relative w-full h-[260px] sm:h-[320px] lg:h-[380px]">
         <div
           className="absolute inset-0 bg-center bg-cover"
@@ -21,7 +53,14 @@ export default function ContactoPage() {
             <h1 className="text-4xl lg:text-6xl font-semibold tracking-tight text-[#1B123A]">
               Contacto
             </h1>
+
+            <p className="sr-only">
+              Contacta con Gasamare Gestión, S.L., asesoría y gestoría para autónomos y empresas en
+              Arroyomolinos (Madrid) y online.
+            </p>
+
             <div className="mt-4 mx-auto h-[2px] w-12 bg-[#6D5AE6]" />
+
             <p className="mt-4 text-base lg:text-lg text-black/70 max-w-2xl mx-auto">
               Envíanos tu consulta y te contestamos lo antes posible.
             </p>
@@ -36,6 +75,8 @@ export default function ContactoPage() {
         </div>
 
         <div className="relative max-w-[120rem] mx-auto px-6 lg:px-12 py-10 lg:py-14">
+          <h2 className="sr-only">Formulario y datos de contacto</h2>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <div>
               <ContactInfo />

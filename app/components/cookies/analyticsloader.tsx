@@ -9,6 +9,7 @@ const GA_ID = "G-Z11SPCQW2K";
 declare global {
   interface Window {
     [key: `ga-disable-${string}`]: boolean | undefined;
+    __ga_inited__?: boolean;
   }
 }
 
@@ -20,6 +21,7 @@ export default function AnalyticsLoader() {
       const c = getConsent();
       const allow = !!c?.analytics;
 
+      // Activa o desactiva GA a nivel global
       window[`ga-disable-${GA_ID}`] = !allow;
       setEnabled(allow);
     };
@@ -39,10 +41,16 @@ export default function AnalyticsLoader() {
       />
       <Script id="ga-init" strategy="afterInteractive">
         {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_ID}', { anonymize_ip: true });
+          if (!window.__ga_inited__) {
+            window.__ga_inited__ = true;
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}', {
+              anonymize_ip: true,
+              send_page_view: true
+            });
+          }
         `}
       </Script>
     </>

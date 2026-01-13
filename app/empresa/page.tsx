@@ -6,6 +6,9 @@ import { ScrollToEmpresaContentButton } from "./scroll-to-content-button";
 
 export const metadata: Metadata = {
   title: "Empresa | Gasamare Gestión",
+  description:
+   "Conoce Gasamare Gestión: asesoría cercana y profesional para autónomos y empresas. Transparencia, orden y tranquilidad en tu gestión.",
+  alternates: { canonical: "/empresa" },
 };
 
 const PRIMARY = "#1B123A";
@@ -40,6 +43,10 @@ export default function EmpresaPage() {
             >
               Orden. Control. Tranquilidad.
             </h1>
+            <p className="sr-only">
+              Gasamare Gestión es una asesoría y gestoría profesional para autónomos y empresas,
+              especializada en gestión fiscal, contable, laboral y administrativa.
+            </p>
 
             <div className="mt-8">
               <ScrollToEmpresaContentButton primary={PRIMARY} accent={ACCENT} />
@@ -58,6 +65,8 @@ export default function EmpresaPage() {
         <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-16 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7 max-w-4xl">
+              <h2 className="sr-only">Sobre Gasamare Gestión</h2>
+              
               <p className="text-base sm:text-lg text-black/70 leading-relaxed">
                 GASAMARE GESTIÓN nace con un objetivo muy claro: hacer que la gestión deje de ser una
                 preocupación constante para empresas, autónomos y particulares.
@@ -126,12 +135,12 @@ export default function EmpresaPage() {
                   SIN COMPROMISO
                 </p>
 
-                <h3
+                <h2
                   className="font-sans font-semibold text-3xl sm:text-4xl leading-[1.08]"
                   style={{ color: PRIMARY }}
                 >
                   ¿Hablamos de tu caso?
-                </h3>
+                </h2>
 
                 <p className="mt-3 text-base sm:text-lg text-black/70">
                   Si necesitas una gestoría o coordinación de obra, cuéntanos qué haces y te decimos

@@ -24,12 +24,8 @@ export function Navbar() {
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
-  // Cierra el menú al navegar
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  useEffect(() => setOpen(false), [pathname]);
 
-  // Bloquea scroll cuando el menú está abierto
   useEffect(() => {
     if (!open) return;
     const prev = document.body.style.overflow;
@@ -46,19 +42,35 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-[120rem] px-2 sm:px-4 lg:px-6">
         <div className="flex h-20 items-center justify-between">
-          {/* ✅ LOGO como el antiguo (sin límites raros en móvil) */}
+          {/* LOGO (desktop como antes) */}
           <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo-gasamare.svg"
-              alt="Gasamare Gestión"
-              width={900}
-              height={220}
-              priority
-              className="h-12 w-auto"
-              quality={100}
-            />
+            {/* Desktop: igual que antes */}
+            <div className="hidden md:block">
+              <Image
+                src="/images/logo-gasamare.svg"
+                alt="Gasamare Gestión"
+                width={900}
+                height={220}
+                priority
+                className="h-12 w-auto"
+                quality={100}
+              />
+            </div>
+
+            {/* Mobile: logo controlado para que no “reviente” */}
+            <div className="md:hidden relative h-12 w-[210px]">
+              <Image
+                src="/images/logo-gasamare.svg"
+                alt="Gasamare Gestión"
+                fill
+                priority
+                className="object-contain"
+                sizes="210px"
+              />
+            </div>
           </Link>
 
+          {/* NAV desktop */}
           <nav className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => {
               const active = isActive(item.href);
@@ -78,6 +90,7 @@ export function Navbar() {
             })}
           </nav>
 
+          {/* ACCIONES desktop */}
           <div className="hidden items-center gap-4 md:flex">
             <Link href="/area-clientes" aria-label="Área clientes">
               <svg
@@ -99,7 +112,7 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* ✅ Hamburguesa solo móvil, SIN recuadro */}
+          {/* HAMBURGUESA mobile (sin recuadro) */}
           <button
             type="button"
             className="md:hidden inline-flex items-center justify-center w-10 h-10"
@@ -116,7 +129,7 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Menú móvil */}
+      {/* PANEL mobile */}
       {open && (
         <div className="md:hidden fixed inset-0 z-[60]">
           <div
@@ -137,7 +150,7 @@ export function Navbar() {
                 aria-label="Cerrar menú"
                 onClick={() => setOpen(false)}
               >
-                <span className="text-2xl leading-none" style={{ color: PRIMARY }}>
+                <span className="text-3xl leading-none" style={{ color: PRIMARY }}>
                   ×
                 </span>
               </button>

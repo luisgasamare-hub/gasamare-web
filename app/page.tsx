@@ -7,6 +7,10 @@ import { HomeHowWeWork } from "./components/home/home-how-we-work";
 export default function Home() {
   return (
     <>
+      <h1 className="sr-only">
+        Asesoría y gestoría para autónomos y empresas
+      </h1>
+
       <Hero />
       <HomeServices />
       <HomeSupport />

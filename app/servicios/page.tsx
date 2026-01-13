@@ -4,6 +4,9 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Servicios | Gasamare Gestión",
+  description:
+    "Servicios de asesoría fiscal, contable y laboral para autónomos y empresas. Gestión clara, cercana y sin complicaciones.",
+  alternates: { canonical: "/servicios" },
 };
 
 const PRIMARY = "#1B123A";
@@ -100,7 +103,7 @@ const SERVICES: Service[] = [
   },
   {
     id: "tramites",
-    serviceName: "Trámites y gestiones puntuales",
+    serviceName: "Trámites y gestiones administrativas",
     serviceImage: "/images/servicios/tramites.jpg",
     shortDescription: "Gestiones concretas para resolver un trámite con rapidez y sin complicaciones.",
     detailedDescription:
@@ -225,12 +228,17 @@ export default function ServiciosPage() {
       </section>
 
       <section id="lista-servicios" className="py-16 sm:py-20 bg-black/[0.02]">
+        <h2 className="sr-only">Servicios de Gasamare Gestión</h2>
+
         <div className="max-w-[120rem] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto space-y-10">
             {SERVICES.map((s) => (
-              <section key={s.id} id={s.id} className="scroll-mt-32">
+              <div key={s.id} id={s.id} className="scroll-mt-32">
+                <p className="sr-only">
+                  {s.serviceName}. {s.shortDescription}
+                </p>
                 <ServiceCard s={s} />
-              </section>
+              </div>
             ))}
           </div>
         </div>

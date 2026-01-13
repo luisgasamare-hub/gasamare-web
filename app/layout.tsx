@@ -28,6 +28,7 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gasamare.es"),
+  robots: { index: true, follow: true },
   title: "GASAMARE GESTIÓN | La gestión de tu empresa en las mejores manos",
   description:
     "Gestoría profesional para autónomos y empresas. Fiscal, contable y laboral con un trato cercano y soluciones claras.",

@@ -5,7 +5,8 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Política de privacidad | Gasamare Gestión",
   description:
-    "Política de privacidad y protección de datos personales de Gasamare Gestión.",
+   "Política de privacidad y protección de datos personales de Gasamare Gestión.",
+  alternates: { canonical: "/privacidad" }
 };
 
 const PRIMARY = "#1B123A";
@@ -20,7 +21,7 @@ export default function PrivacidadPage() {
             alt="Gasamare Gestión"
             fill
             className="object-contain"
-            priority
+            priority={false}
           />
         </div>
 
@@ -33,6 +34,8 @@ export default function PrivacidadPage() {
           </p>
         </div>
       </header>
+
+      <h2 className="sr-only">Política de privacidad y protección de datos</h2>
 
       <div className="mt-6 border-t border-black/10" />
 

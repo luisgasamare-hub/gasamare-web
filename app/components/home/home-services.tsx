@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 
@@ -78,7 +76,7 @@ export function HomeServices() {
                       className="text-2xl sm:text-[28px] lg:text-[32px] font-semibold leading-tight break-words"
                       style={{ color: PRIMARY }}
                     >
-                      Documentación y accesos a obra
+                      Gestión administrativa y laboral en obra
                     </h3>
 
                     <p className="mt-4 sm:mt-5 text-base sm:text-lg text-black/70 break-words">

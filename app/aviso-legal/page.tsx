@@ -4,7 +4,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Aviso legal | Gasamare Gestión",
-  description: "Aviso legal y condiciones de uso del sitio web de Gasamare Gestión.",
+  description: 
+   "Aviso legal y condiciones de uso del sitio web de Gasamare Gestión.",
+  alternates: { canonical: "/aviso-legal" }
 };
 
 const PRIMARY = "#1B123A";
@@ -19,7 +21,7 @@ export default function AvisoLegalPage() {
             alt="Gasamare Gestión"
             fill
             className="object-contain"
-            priority
+            priority={false}
           />
         </div>
         <div>
@@ -29,6 +31,8 @@ export default function AvisoLegalPage() {
           </p>
         </div>
       </header>
+
+      <h2 className="sr-only">Información legal de Gasamare Gestión</h2>
 
       <div className="mt-6 border-t border-black/10" />
 

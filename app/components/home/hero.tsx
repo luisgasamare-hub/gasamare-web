@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,7 +13,7 @@ export function Hero() {
           alt="Edificio corporativo moderno"
           fill
           priority
-          quality={90}
+          quality={80}
           className="object-cover"
           style={{ objectPosition: "96% 35%" }}
         />

@@ -10,7 +10,7 @@ export function ContactInfo() {
   const location = "Madrid, España";
 
   return (
-    <aside className="bg-white">
+    <aside className="bg-white pb-24 lg:pb-0">
       <h2 className="text-3xl lg:text-4xl font-semibold tracking-tight text-[#1B123A]">
         Datos de Contacto
       </h2>
@@ -27,7 +27,7 @@ export function ContactInfo() {
           content={
             <a
               href={`mailto:${email}`}
-              className="text-base text-black/60 hover:underline underline-offset-4"
+              className="text-base text-black/60 hover:underline underline-offset-4 break-all"
             >
               {email}
             </a>
@@ -38,11 +38,13 @@ export function ContactInfo() {
           icon={<Phone className="w-6 h-6" />}
           title="Teléfono"
           content={
-            <div className="text-base text-black/60">
+            <div className="text-base text-black/60 flex flex-col sm:flex-row sm:items-center sm:gap-2">
               <a href={phone1.href} className="hover:underline underline-offset-4">
                 {phone1.value}
               </a>
-              <span className="mx-2 text-black/40">|</span>
+
+              <span className="hidden sm:inline text-black/40">|</span>
+
               <a href={phone2.href} className="hover:underline underline-offset-4">
                 {phone2.value}
               </a>
