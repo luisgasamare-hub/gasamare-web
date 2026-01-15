@@ -59,10 +59,10 @@ export default function PrivacidadPage() {
             <br />
             Correo electrónico:{" "}
             <a
-              href="mailto:luis.gasamare@gmail.com"
+              href="mailto:info@gasamare.es"
               className="underline underline-offset-4"
             >
-              luis.gasamare@gmail.com
+              info@gasamare.es
             </a>
           </p>
         </div>

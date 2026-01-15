@@ -6,7 +6,7 @@ const WHATSAPP = "#25D366";
 export function ContactInfo() {
   const phone1 = { value: "+34 614 859 357", href: "tel:+34614859357" };
   const phone2 = { value: "+34 671 047 381", href: "tel:+34671047381" };
-  const email = "luis.gasamare@gmail.com";
+  const email = "info@gasamare.es";
   const location = "Madrid, España";
 
   return (

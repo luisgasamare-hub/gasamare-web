@@ -57,11 +57,11 @@ export function Footer() {
             </h4>
             <div className="flex flex-col gap-3 text-sm">
               <a
-                href="mailto:luis.gasamare@gmail.com"
+                href="mailto:info@gasamare.es"
                 className="flex items-center gap-3 text-white/70 hover:text-white"
               >
                 <Mail className="h-5 w-5" />
-                luis.gasamare@gmail.com
+                info@gasamare.es
               </a>
 
               <a

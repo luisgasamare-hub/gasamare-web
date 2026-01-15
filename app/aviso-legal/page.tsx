@@ -53,7 +53,7 @@ export default function AvisoLegalPage() {
             <br />
             <strong>Domicilio social:</strong> Calle Formentera, 25, 28939 Arroyomolinos, Madrid
             <br />
-            <strong>Correo electrónico:</strong> luis.gasamare@gmail.com
+            <strong>Correo electrónico:</strong> info@gasamare.es
             <br />
             <strong>Datos registrales:</strong> Inscrita en el Registro Mercantil. Hoja n.º 869907,
             Inscripción 1.ª, Asiento 10/2025/27906.

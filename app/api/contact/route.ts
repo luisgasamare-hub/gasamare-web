@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     }
 
     const resendApiKey = process.env.RESEND_API_KEY;
-    const to = process.env.CONTACT_TO || "luis.gasamare@gmail.com";
+    const to = process.env.CONTACT_TO || "info@gasamare.es";
     const from = process.env.CONTACT_FROM || "GASAMARE <onboarding@resend.dev>";
 
     if (!resendApiKey) {

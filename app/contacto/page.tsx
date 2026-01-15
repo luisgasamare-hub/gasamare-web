@@ -22,13 +22,13 @@ export default function ContactoPage() {
       addressCountry: "ES",
     },
     telephone: "+34 614 85 93 57",
-    email: "luis.gasamare@gmail.com",
+    email: "info@gasamare.es",
     contactPoint: [
       {
         "@type": "ContactPoint",
         contactType: "Atención al cliente",
         telephone: "+34 614 85 93 57",
-        email: "luis.gasamare@gmail.com",
+        email: "info@gasamare.es",
         areaServed: "ES",
         availableLanguage: ["es"],
       },
