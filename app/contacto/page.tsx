@@ -64,6 +64,12 @@ export default function ContactoPage() {
             <p className="mt-4 text-base lg:text-lg text-black/70 max-w-2xl mx-auto">
               Envíanos tu consulta y te contestamos lo antes posible.
             </p>
+
+            {/* NUEVO (SEO local) */}
+            <p className="mt-2 text-sm text-black/60 max-w-2xl mx-auto">
+              Atendemos a autónomos y empresas en Arroyomolinos, Madrid y alrededores, así como de
+              forma online en toda España.
+            </p>
           </div>
         </div>
       </section>
