@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PRIMARY = "#1B123A";
-const HERO_IMAGE = "/images/inicio/hero-edificio.jpg";
+const HERO_IMAGE = "/images/inicio/hero-edificio.webp";
 
 export function Hero() {
   return (

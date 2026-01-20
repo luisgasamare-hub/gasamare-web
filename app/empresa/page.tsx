@@ -7,7 +7,7 @@ import { ScrollToEmpresaContentButton } from "./scroll-to-content-button";
 export const metadata: Metadata = {
   title: "Empresa | Gasamare Gestión",
   description:
-   "Conoce Gasamare Gestión: asesoría cercana y profesional para autónomos y empresas. Transparencia, orden y tranquilidad en tu gestión.",
+    "Conoce Gasamare Gestión: asesoría cercana y profesional para autónomos y empresas. Transparencia, orden y tranquilidad en tu gestión.",
   alternates: { canonical: "/empresa" },
 };
 
@@ -21,7 +21,7 @@ export default function EmpresaPage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/images/empresa/introduccion.jpg')",
+            backgroundImage: "url('/images/empresa/introduccion.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -43,6 +43,7 @@ export default function EmpresaPage() {
             >
               Orden. Control. Tranquilidad.
             </h1>
+
             <p className="sr-only">
               Gasamare Gestión es una asesoría y gestoría profesional para autónomos y empresas,
               especializada en gestión fiscal, contable, laboral y administrativa.
@@ -66,7 +67,7 @@ export default function EmpresaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7 max-w-4xl">
               <h2 className="sr-only">Sobre Gasamare Gestión</h2>
-              
+
               <p className="text-base sm:text-lg text-black/70 leading-relaxed">
                 GASAMARE GESTIÓN nace con un objetivo muy claro: hacer que la gestión deje de ser una
                 preocupación constante para empresas, autónomos y particulares.
@@ -109,7 +110,7 @@ export default function EmpresaPage() {
             <div className="lg:col-span-5 flex justify-center">
               <Image
                 src="/images/empresa/isotipo.svg"
-                alt="Gasamare Gestión"
+                alt="Isotipo de Gasamare Gestión, asesoría y gestoría profesional"
                 width={160}
                 height={160}
                 className="w-32 sm:w-40 h-auto"

@@ -45,7 +45,7 @@ export default function ContactoPage() {
       <section className="relative w-full h-[260px] sm:h-[320px] lg:h-[380px]">
         <div
           className="absolute inset-0 bg-center bg-cover"
-          style={{ backgroundImage: "url('/images/contacto/contacto-hero.jpg')" }}
+          style={{ backgroundImage: "url('/images/contacto/contacto-hero.webp')" }}
         />
         <div className="absolute inset-0 bg-white/40" />
         <div className="relative h-full flex items-center justify-center text-center px-6">

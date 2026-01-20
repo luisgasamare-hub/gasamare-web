@@ -27,7 +27,7 @@ const SERVICES: Service[] = [
   {
     id: "autonomos",
     serviceName: "Gestión de autónomos",
-    serviceImage: "/images/servicios/autonomos.png",
+    serviceImage: "/images/servicios/autonomos.webp",
     shortDescription:
       "Gestión fiscal y administrativa para autónomos y profesionales, con un servicio ordenado y orientado a resultados.",
     detailedDescription:
@@ -47,7 +47,7 @@ const SERVICES: Service[] = [
   {
     id: "empresas",
     serviceName: "Gestión de empresas",
-    serviceImage: "/images/servicios/empresas.jpg",
+    serviceImage: "/images/servicios/empresas.webp",
     shortDescription: "Gestión integral para empresas que quieren control y tranquilidad.",
     detailedDescription:
       "Organizamos y gestionamos el día a día fiscal y contable, asesorando en decisiones y trámites clave.",
@@ -65,7 +65,7 @@ const SERVICES: Service[] = [
   {
     id: "sociedades",
     serviceName: "Constitución y puesta en marcha de sociedades",
-    serviceImage: "/images/servicios/sociedades.jpg",
+    serviceImage: "/images/servicios/sociedades.webp",
     shortDescription:
       "Asesoramiento y tramitación completa para crear tu sociedad y dejarla operativa desde el inicio.",
     detailedDescription:
@@ -85,7 +85,7 @@ const SERVICES: Service[] = [
   {
     id: "obra",
     serviceName: "Gestión de personal de obra",
-    serviceImage: "/images/servicios/obra.jpg",
+    serviceImage: "/images/servicios/obra.webp",
     shortDescription:
       "Gestión administrativa y laboral de personal en obra para empresas de construcción y subcontratas.",
     detailedDescription:
@@ -104,7 +104,7 @@ const SERVICES: Service[] = [
   {
     id: "tramites",
     serviceName: "Trámites y gestiones administrativas",
-    serviceImage: "/images/servicios/tramites.jpg",
+    serviceImage: "/images/servicios/tramites.webp",
     shortDescription: "Gestiones concretas para resolver un trámite con rapidez y sin complicaciones.",
     detailedDescription:
       "Te acompañamos en todo el proceso para que el trámite se resuelva correctamente y sin complicaciones.",
@@ -125,30 +125,30 @@ const SERVICES: Service[] = [
 function ServiceCard({ s }: { s: Service }) {
   return (
     <article className="border border-black/10 bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.01]">
-      {s.serviceImage ? (
+      {s.serviceImage && (
         <div className="relative h-64 sm:h-72 overflow-hidden">
           <Image
             src={s.serviceImage}
-            alt={s.serviceName}
+            alt={`Servicio de ${s.serviceName} en Gasamare Gestión`}
             fill
             sizes="(max-width: 640px) 100vw, 768px"
             className="object-cover"
           />
         </div>
-      ) : null}
+      )}
 
       <div className="p-7 sm:p-10">
         <h3 className="text-2xl sm:text-3xl font-semibold" style={{ color: PRIMARY }}>
           {s.serviceName}
         </h3>
 
-        {s.shortDescription ? <p className="mt-4 text-black/80">{s.shortDescription}</p> : null}
+        {s.shortDescription && <p className="mt-4 text-black/80">{s.shortDescription}</p>}
 
-        {s.detailedDescription ? (
+        {s.detailedDescription && (
           <p className="mt-4 text-sm text-black/70">{s.detailedDescription}</p>
-        ) : null}
+        )}
 
-        {s.includes?.length ? (
+        {s.includes?.length && (
           <div className="mt-8">
             <h4 className="font-semibold" style={{ color: PRIMARY }}>
               Incluye
@@ -165,16 +165,16 @@ function ServiceCard({ s }: { s: Service }) {
               ))}
             </ul>
           </div>
-        ) : null}
+        )}
 
-        {s.targetAudience ? (
+        {s.targetAudience && (
           <div className="mt-8">
             <h4 className="font-semibold" style={{ color: PRIMARY }}>
               Dirigido a
             </h4>
             <p className="mt-2 text-sm text-black/70">{s.targetAudience}</p>
           </div>
-        ) : null}
+        )}
 
         <div className="mt-10">
           <Link
@@ -196,8 +196,8 @@ export default function ServiciosPage() {
       <section className="relative overflow-hidden py-24 sm:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/images/servicios/servicios-hero.jpg"
-            alt="Nuestros servicios"
+            src="/images/servicios/servicios-hero.webp"
+            alt="Servicios profesionales de asesoría y gestión empresarial"
             fill
             priority
             sizes="100vw"

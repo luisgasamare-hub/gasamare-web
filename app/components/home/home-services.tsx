@@ -19,12 +19,11 @@ export function HomeServices() {
                 <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-10">
                   <div className="relative shrink-0 h-24 w-24 sm:h-28 sm:w-28 lg:h-36 lg:w-36 mx-auto md:mx-0">
                     <Image
-                      src="/images/inicio/servicio-gestoria.png"
+                      src="/images/inicio/servicio-gestoria.webp"
                       alt="Gestoría y asesoría"
                       fill
                       className="object-contain"
                       sizes="(max-width: 768px) 112px, 144px"
-                      priority
                     />
                   </div>
 
@@ -62,12 +61,11 @@ export function HomeServices() {
                 <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-10">
                   <div className="relative shrink-0 h-24 w-24 sm:h-28 sm:w-28 lg:h-36 lg:w-36 mx-auto md:mx-0">
                     <Image
-                      src="/images/inicio/servicio-obra.png"
+                      src="/images/inicio/servicio-obra.webp"
                       alt="Documentación y accesos a obra"
                       fill
                       className="object-contain"
                       sizes="(max-width: 768px) 112px, 144px"
-                      priority
                     />
                   </div>
 
