@@ -32,17 +32,24 @@ export function HomeSupport() {
   const month: MonthData = useMemo(
     () => ({
       year: 2026,
-      monthIndex: 0,
-      monthLabel: "Enero",
-      daysInMonth: 31,
+      monthIndex: 1, // Febrero
+      monthLabel: "Febrero",
+      daysInMonth: 28,
       itemsByDay: {
-        1: [{ kind: "holiday", title: "Año Nuevo" }],
-        6: [{ kind: "holiday", title: "Día de Reyes" }],
-        30: [
-          { kind: "due", title: "IVA / IRPF", subtitle: "Agencia Tributaria" },
-          { kind: "due", title: "Cierre interno", subtitle: "Cierre contable" },
+        20: [
+          {
+            kind: "due",
+            title: "IVA mensual",
+            subtitle: "Gran Empresa · Agencia Tributaria",
+          },
         ],
-        31: [{ kind: "due", title: "Seguros sociales", subtitle: "Ingreso de cuotas" }],
+        28: [
+          {
+            kind: "due",
+            title: "Seguros sociales",
+            subtitle: "Ingreso de cuotas",
+          },
+        ],
       },
     }),
     []
