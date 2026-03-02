@@ -30,30 +30,42 @@ function cn(...s: Array<string | false | undefined | null>) {
 
 export function HomeSupport() {
   const month: MonthData = useMemo(
-    () => ({
-      year: 2026,
-      monthIndex: 1, // Febrero
-      monthLabel: "Febrero",
-      daysInMonth: 28,
-      itemsByDay: {
-        20: [
-          {
-            kind: "due",
-            title: "IVA mensual",
-            subtitle: "Gran Empresa · Agencia Tributaria",
-          },
-        ],
-        28: [
-          {
-            kind: "due",
-            title: "Seguros sociales",
-            subtitle: "Ingreso de cuotas",
-          },
-        ],
-      },
-    }),
-    []
-  );
+  () => ({
+    year: 2026,
+    monthIndex: 2, // Marzo
+    monthLabel: "Marzo",
+    daysInMonth: 31,
+    itemsByDay: {
+      2: [
+        {
+          kind: "due",
+          title: "Modelo 347",
+          subtitle: "Declaración anual de operaciones con terceros · Agencia Tributaria",
+        },
+      ],
+      20: [
+        {
+          kind: "due",
+          title: "IVA mensual",
+          subtitle: "Gran Empresa · Agencia Tributaria",
+        },
+        {
+          kind: "due",
+          title: "IRPF",
+          subtitle: "Agencia Tributaria",
+        },
+      ],
+      31: [
+        {
+          kind: "due",
+          title: "Seguros sociales",
+          subtitle: "Ingreso de cuotas",
+        },
+      ],
+    },
+  }),
+  []
+);
 
   const weekLabels = ["LU", "MA", "MI", "JU", "VI", "SÁ", "DO"];
 

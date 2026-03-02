@@ -92,7 +92,11 @@ export function Navbar() {
 
           {/* ACCIONES desktop */}
           <div className="hidden items-center gap-4 md:flex">
-            <Link href="/area-clientes" aria-label="Área clientes">
+            <a
+              href="https://portal.gasamare.es"
+              aria-label="Área clientes"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -101,7 +105,7 @@ export function Navbar() {
               >
                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.31 0-6 2.02-6 4.5V20h12v-1.5C18 16.02 15.31 14 12 14z" />
               </svg>
-            </Link>
+            </a>
 
             <Link
               href="/contacto"
@@ -176,8 +180,8 @@ export function Navbar() {
                 );
               })}
 
-              <Link
-                href="/area-clientes"
+              <a
+                href="https://portal.gasamare.es"
                 className="block py-4 border-b"
                 style={{
                   borderColor: BORDER,
@@ -185,9 +189,10 @@ export function Navbar() {
                   fontWeight: 500,
                   fontSize: "18px",
                 }}
+                rel="noopener noreferrer"
               >
                 Área clientes
-              </Link>
+              </a>
 
               <Link
                 href="/contacto"
