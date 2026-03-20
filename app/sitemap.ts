@@ -25,5 +25,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/gestoria-autonomos-madrid`,
       lastModified: new Date(),
     },
+         {
+      url: `${baseUrl}/gestoria-empresas-madrid`,
+      lastModified: new Date(),
+    },
   ];
 }

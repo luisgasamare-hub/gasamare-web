@@ -21,6 +21,8 @@ type Service = {
   includes?: string[];
   targetAudience?: string;
   ctaLabel?: string;
+  seoLink?: string;
+  seoLinkLabel?: string;
 };
 
 const SERVICES: Service[] = [
@@ -43,6 +45,8 @@ const SERVICES: Service[] = [
     targetAudience:
       "Autónomos y profesionales que buscan una gestión sencilla, bien llevada y con seguimiento.",
     ctaLabel: "Solicitar información",
+    seoLink: "/gestoria-autonomos-madrid",
+    seoLinkLabel: "Ver servicio",
   },
   {
     id: "empresas",
@@ -61,6 +65,8 @@ const SERVICES: Service[] = [
     ],
     targetAudience: "PYMES y sociedades que necesitan una gestión profesional y con trato directo.",
     ctaLabel: "Solicitar información",
+    seoLink: "/gestoria-empresas-madrid",
+    seoLinkLabel: "Ver servicio",
   },
   {
     id: "sociedades",
@@ -176,14 +182,24 @@ function ServiceCard({ s }: { s: Service }) {
           </div>
         )}
 
-        <div className="mt-10">
+        <div className="mt-10 flex items-center justify-between gap-4">
           <Link
             href="/contacto"
             className="inline-flex font-semibold transition-all hover:opacity-80 hover:translate-x-[2px]"
-            style={{ color: LOGO_GRAY }}
+            style={{ color: PRIMARY }}
           >
             {s.ctaLabel ?? "Solicitar información"}
           </Link>
+
+          {s.seoLink && s.seoLinkLabel && (
+            <Link
+              href={s.seoLink}
+              className="inline-flex text-sm font-semibold transition-opacity hover:opacity-80"
+              style={{ color: LOGO_GRAY }}
+            >
+              {s.seoLinkLabel}
+            </Link>
+          )}
         </div>
       </div>
     </article>
