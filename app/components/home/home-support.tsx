@@ -29,33 +29,39 @@ function cn(...s: Array<string | false | undefined | null>) {
 }
 
 export function HomeSupport() {
+  
   const month: MonthData = useMemo(
   () => ({
     year: 2026,
-    monthIndex: 2, // Marzo
-    monthLabel: "Marzo",
-    daysInMonth: 31,
+    monthIndex: 3, // Abril
+    monthLabel: "Abril",
+    daysInMonth: 30,
     itemsByDay: {
       2: [
         {
-          kind: "due",
-          title: "Modelo 347",
-          subtitle: "Declaración anual de operaciones con terceros · Agencia Tributaria",
+          kind: "holiday",
+          title: "Jueves Santo",
+        },
+      ],
+      3: [
+        {
+          kind: "holiday",
+          title: "Viernes Santo",
         },
       ],
       20: [
         {
           kind: "due",
-          title: "IVA mensual",
-          subtitle: "Gran Empresa · Agencia Tributaria",
+          title: "IVA",
+          subtitle: "MOD 303 · Agencia Tributaria",
         },
         {
           kind: "due",
           title: "IRPF",
-          subtitle: "Agencia Tributaria",
+          subtitle: "MOD 130 · Agencia Tributaria",
         },
       ],
-      31: [
+      30: [
         {
           kind: "due",
           title: "Seguros sociales",
