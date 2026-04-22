@@ -29,49 +29,48 @@ function cn(...s: Array<string | false | undefined | null>) {
 }
 
 export function HomeSupport() {
-  
   const month: MonthData = useMemo(
-  () => ({
-    year: 2026,
-    monthIndex: 3, // Abril
-    monthLabel: "Abril",
-    daysInMonth: 30,
-    itemsByDay: {
-      2: [
-        {
-          kind: "holiday",
-          title: "Jueves Santo",
-        },
-      ],
-      3: [
-        {
-          kind: "holiday",
-          title: "Viernes Santo",
-        },
-      ],
-      20: [
-        {
-          kind: "due",
-          title: "IVA",
-          subtitle: "MOD 303 · Agencia Tributaria",
-        },
-        {
-          kind: "due",
-          title: "IRPF",
-          subtitle: "MOD 130 · Agencia Tributaria",
-        },
-      ],
-      30: [
-        {
-          kind: "due",
-          title: "Seguros sociales",
-          subtitle: "Ingreso de cuotas",
-        },
-      ],
-    },
-  }),
-  []
-);
+    () => ({
+      year: 2026,
+      monthIndex: 3,
+      monthLabel: "Abril",
+      daysInMonth: 30,
+      itemsByDay: {
+        2: [
+          {
+            kind: "holiday",
+            title: "Jueves Santo",
+          },
+        ],
+        3: [
+          {
+            kind: "holiday",
+            title: "Viernes Santo",
+          },
+        ],
+        20: [
+          {
+            kind: "due",
+            title: "IVA",
+            subtitle: "MOD 303 · Agencia Tributaria",
+          },
+          {
+            kind: "due",
+            title: "IRPF",
+            subtitle: "MOD 130 · Agencia Tributaria",
+          },
+        ],
+        30: [
+          {
+            kind: "due",
+            title: "Seguros sociales",
+            subtitle: "Ingreso de cuotas",
+          },
+        ],
+      },
+    }),
+    []
+  );
 
   const weekLabels = ["LU", "MA", "MI", "JU", "VI", "SÁ", "DO"];
 
@@ -115,15 +114,15 @@ export function HomeSupport() {
             </h2>
 
             <p className="mt-5 text-base sm:text-lg text-black/70 max-w-2xl">
-              Planificamos vencimientos y documentación con antelación para que todo llegue preparado
-              cuando toca.
+              Planificamos vencimientos, impuestos y documentación con antelación
+              para que autónomos y empresas tengan su gestión fiscal, contable y laboral al día.
             </p>
 
             <div className="mt-9 space-y-6">
               <SupportPoint
                 icon={<CalendarDays className="h-5 w-5" />}
                 title="Fechas visibles"
-                text="Vencimientos y festivos marcados directamente en el mes."
+                text="Vencimientos, impuestos y festivos marcados directamente en el mes."
               />
               <SupportPoint
                 icon={<FolderKanban className="h-5 w-5" />}

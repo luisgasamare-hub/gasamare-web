@@ -3,10 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Servicios | Gasamare Gestión",
+  title: "Servicios de asesoría y gestoría en Madrid | GASAMARE",
   description:
-    "Servicios de asesoría fiscal, contable y laboral para autónomos y empresas. Gestión clara, cercana y sin complicaciones.",
-  alternates: { canonical: "/servicios" },
+    "Servicios de asesoría y gestoría en Madrid para autónomos, empresas y pymes. Gestión fiscal, contable, laboral, sociedades, obra y trámites administrativos.",
+  alternates: { canonical: "https://gasamare.es/servicios" },
 };
 
 const PRIMARY = "#1B123A";

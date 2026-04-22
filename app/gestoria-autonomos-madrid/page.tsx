@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Gestoría para autónomos en Madrid | Gasamare Gestión",
+  title: "Gestoría para autónomos en Madrid | Fiscal, contable y trámites | GASAMARE",
   description:
-    "Servicio de gestoría para autónomos en Madrid. Gestión fiscal, contable y asesoramiento continuo para que te centres en tu actividad.",
-  alternates: { canonical: "/gestoria-autonomos-madrid" },
+    "Gestoría para autónomos en Madrid con gestión fiscal, contable y administrativa. Impuestos, altas, bajas, trámites y asesoramiento continuo.",
+  alternates: { canonical: "https://gasamare.es/gestoria-autonomos-madrid" },
 };
 
 const PRIMARY = "#1B123A";

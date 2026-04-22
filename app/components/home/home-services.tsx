@@ -8,8 +8,28 @@ export function HomeServices() {
     <section className="bg-white">
       <div className="mx-auto max-w-[120rem] px-6 lg:px-12 py-16 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-[1200px]">
+          <div className="mb-10 max-w-3xl">
+            <p
+              className="text-xs tracking-[0.28em] uppercase mb-4"
+              style={{ color: PRIMARY, opacity: 0.55 }}
+            >
+              SERVICIOS
+            </p>
+
+            <h2
+              className="font-sans font-semibold leading-[1.08] text-3xl sm:text-4xl"
+              style={{ color: PRIMARY }}
+            >
+              Servicios de asesoría y gestoría para autónomos, empresas y obra.
+            </h2>
+
+            <p className="mt-5 text-base sm:text-lg text-black/70">
+              Ofrecemos servicio de asesoría y gestoría en Madrid con atención
+              cercana, control de plazos y gestión profesional para cada necesidad.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
-            {/* CARD 1 */}
             <Link
               href="/servicios#autonomos"
               aria-label="Ir a Gestión de autónomos"
@@ -36,8 +56,8 @@ export function HomeServices() {
                     </h3>
 
                     <p className="mt-4 sm:mt-5 text-base sm:text-lg text-black/70 break-words">
-                      Gestión fiscal, contable y laboral orientada al control,
-                      la claridad y la tranquilidad en el día a día de tu actividad.
+                      Gestión fiscal, contable y laboral para autónomos y empresas,
+                      orientada al control, la claridad y la tranquilidad en el día a día.
                     </p>
 
                     <span
@@ -51,7 +71,6 @@ export function HomeServices() {
               </div>
             </Link>
 
-            {/* CARD 2 */}
             <Link
               href="/servicios#obra"
               aria-label="Ir a Gestión de personal de obra"
@@ -91,6 +110,15 @@ export function HomeServices() {
                   </div>
                 </div>
               </div>
+            </Link>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-4 text-sm">
+            <Link href="/gestoria-autonomos-madrid" className="underline underline-offset-2 text-black/70">
+              Ver gestoría para autónomos en Madrid
+            </Link>
+            <Link href="/gestoria-empresas-madrid" className="underline underline-offset-2 text-black/70">
+              Ver gestoría para empresas en Madrid
             </Link>
           </div>
         </div>

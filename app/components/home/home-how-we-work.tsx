@@ -77,17 +77,17 @@ const cards: CardItem[] = [
   {
     icon: ClipboardList,
     title: "Analizamos tu situación",
-    desc: "Revisamos tu actividad, tu estructura y tus obligaciones para entender tu situación y detectar qué necesitas.",
+    desc: "Revisamos tu actividad, tu estructura y tus obligaciones para entender qué necesitas y cómo ayudarte mejor.",
   },
   {
     icon: CalendarDays,
     title: "Planificamos y preparamos",
-    desc: "Organizamos plazos y documentación con margen para que todo llegue listo a tiempo.",
+    desc: "Organizamos plazos, impuestos y documentación con margen para que todo llegue listo a tiempo.",
   },
   {
     icon: ShieldCheck,
     title: "Seguimiento y avisos",
-    desc: "Control continuo y comunicación directa para resolver rápido y evitar bloqueos.",
+    desc: "Control continuo y comunicación directa para resolver rápido y mantener tu gestión al día.",
   },
 ];
 
@@ -112,7 +112,8 @@ export function HomeHowWeWork() {
             </h2>
 
             <p className="mt-5 text-base sm:text-lg text-black/70">
-              Transparencia desde el primer día: qué toca, cuándo toca y cómo lo dejamos preparado.
+              Transparencia desde el primer día en cada servicio de asesoría y gestoría:
+              qué toca, cuándo toca y cómo lo dejamos preparado.
             </p>
           </AnimatedElement>
         </div>

@@ -30,12 +30,17 @@ export function Hero() {
               GESTORÍA · ASESORÍA · FISCAL · LABORAL · CONTABLE · OBRA
             </p>
 
-            <h1
+            <h2
               className="max-w-[26ch] font-sans text-4xl font-semibold leading-[1.06] sm:text-5xl lg:text-6xl"
               style={{ color: PRIMARY }}
             >
               La gestión de tu empresa en las mejores manos.
-            </h1>
+            </h2>
+
+            <p className="mt-6 max-w-2xl text-base sm:text-lg text-black/70">
+              Asesoría y gestoría en Madrid para autónomos, empresas y pymes,
+              con gestión fiscal, contable, laboral y administrativa.
+            </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -55,9 +60,15 @@ export function Hero() {
               </Link>
             </div>
 
-            <p className="mt-6 text-xs text-black/55">
-              Respuesta rápida por WhatsApp o email. Sin compromiso.
-            </p>
+            <div className="mt-6 flex flex-col gap-2 text-xs text-black/55 sm:flex-row sm:flex-wrap sm:gap-4">
+              <p>Respuesta rápida por WhatsApp o email. Sin compromiso.</p>
+              <Link href="/gestoria-autonomos-madrid" className="underline underline-offset-2">
+                Autónomos
+              </Link>
+              <Link href="/gestoria-empresas-madrid" className="underline underline-offset-2">
+                Empresas
+              </Link>
+            </div>
           </div>
         </div>
       </div>

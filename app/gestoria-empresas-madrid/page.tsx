@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Gestoría para empresas en Madrid | Gasamare Gestión",
+  title: "Gestoría para empresas en Madrid | Fiscal, contable y laboral | GASAMARE",
   description:
-    "Gestoría para empresas en Madrid. Gestión fiscal, contable y laboral para sociedades. Servicio cercano, profesional y sin complicaciones.",
-  alternates: { canonical: "/gestoria-empresas-madrid" },
+    "Gestoría para empresas en Madrid con servicio fiscal, contable y laboral. Gestión para sociedades y pymes con atención profesional y cercana.",
+  alternates: { canonical: "https://gasamare.es/gestoria-empresas-madrid" },
 };
 
 const PRIMARY = "#1B123A";

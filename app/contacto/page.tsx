@@ -3,9 +3,10 @@ import { ContactForm } from "../components/contact/contact-form";
 import { ContactInfo } from "../components/contact/contact-info";
 
 export const metadata: Metadata = {
-  title: "Contacto | Gasamare Gestión",
-  description: "Contacta con GASAMARE. Te atendemos por email, teléfono o WhatsApp.",
-  alternates: { canonical: "/contacto" },
+  title: "Contacto | Asesoría y gestoría en Madrid | GASAMARE",
+  description:
+    "Contacta con GASAMARE, asesoría y gestoría en Madrid. Atención por teléfono, email o WhatsApp para autónomos, empresas y consultas administrativas.",
+  alternates: { canonical: "https://gasamare.es/contacto" },
 };
 
 export default function ContactoPage() {

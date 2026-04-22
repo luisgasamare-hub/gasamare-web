@@ -5,10 +5,10 @@ import Image from "next/image";
 import { ScrollToEmpresaContentButton } from "./scroll-to-content-button";
 
 export const metadata: Metadata = {
-  title: "Empresa | Gasamare Gestión",
+  title: "Sobre GASAMARE | Asesoría y gestoría en Madrid",
   description:
-    "Conoce Gasamare Gestión: asesoría cercana y profesional para autónomos y empresas. Transparencia, orden y tranquilidad en tu gestión.",
-  alternates: { canonical: "/empresa" },
+    "Conoce GASAMARE, asesoría y gestoría en Madrid para autónomos, empresas y pymes. Gestión profesional, cercana y ordenada con seguimiento continuo.",
+  alternates: { canonical: "https://gasamare.es/empresa" },
 };
 
 const PRIMARY = "#1B123A";
