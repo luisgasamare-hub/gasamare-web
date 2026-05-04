@@ -32,35 +32,29 @@ export function HomeSupport() {
   const month: MonthData = useMemo(
     () => ({
       year: 2026,
-      monthIndex: 3,
-      monthLabel: "Abril",
-      daysInMonth: 30,
+      monthIndex: 4, // Mayo
+      monthLabel: "Mayo",
+      daysInMonth: 31,
       itemsByDay: {
-        2: [
+        1: [
           {
             kind: "holiday",
-            title: "Jueves Santo",
-          },
-        ],
-        3: [
-          {
-            kind: "holiday",
-            title: "Viernes Santo",
+            title: "Fiesta del Trabajo",
           },
         ],
         20: [
           {
             kind: "due",
-            title: "IVA",
-            subtitle: "MOD 303 · Agencia Tributaria",
+            title: "IVA mensual",
+            subtitle: "Gran Empresa · Agencia Tributaria",
           },
           {
             kind: "due",
             title: "IRPF",
-            subtitle: "MOD 130 · Agencia Tributaria",
+            subtitle: "Agencia Tributaria",
           },
         ],
-        30: [
+        31: [
           {
             kind: "due",
             title: "Seguros sociales",
