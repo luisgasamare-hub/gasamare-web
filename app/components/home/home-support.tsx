@@ -32,17 +32,11 @@ export function HomeSupport() {
   const month: MonthData = useMemo(
     () => ({
       year: 2026,
-      monthIndex: 4, // Mayo
-      monthLabel: "Mayo",
-      daysInMonth: 31,
+      monthIndex: 5, // Junio
+      monthLabel: "Junio",
+      daysInMonth: 30,
       itemsByDay: {
-        1: [
-          {
-            kind: "holiday",
-            title: "Fiesta del Trabajo",
-          },
-        ],
-        20: [
+        22: [
           {
             kind: "due",
             title: "IVA mensual",
@@ -54,11 +48,16 @@ export function HomeSupport() {
             subtitle: "Agencia Tributaria",
           },
         ],
-        31: [
+        30: [
           {
             kind: "due",
             title: "Seguros sociales",
             subtitle: "Ingreso de cuotas",
+          },
+          {
+            kind: "due",
+            title: "Declaración de la Renta",
+            subtitle: "Fin de campaña IRPF 2025",
           },
         ],
       },
